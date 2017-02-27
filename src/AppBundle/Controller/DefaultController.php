@@ -9,13 +9,25 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="list", methods={"GET"})
+     */
+    public function listAction(Request $request)
+    {
+        $index = $this->get('pucene_doctrine.indices.test');
+
+        return $this->render('default/list.html.twig', ['documents' => $index->search($request->get('q'))]);
+    }
+
+    /**
+     * @Route("/", name="index", methods={"POST"})
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);
+        $index = $this->get('pucene_doctrine.indices.test');
+        $index->index(
+            ['title' => $request->get('title')]
+        );
+
+        return $this->redirectToRoute('list');
     }
 }
