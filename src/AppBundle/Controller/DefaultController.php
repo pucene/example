@@ -2,9 +2,13 @@
 
 namespace AppBundle\Controller;
 
+use Pucene\Component\QueryBuilder\Query\FullText\Match;
+use Pucene\Component\QueryBuilder\Query\MatchAll;
+use Pucene\Component\QueryBuilder\Search;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -15,7 +19,12 @@ class DefaultController extends Controller
     {
         $index = $this->get('pucene_doctrine.indices.test');
 
-        return $this->render('default/list.html.twig', ['documents' => $index->search($request->get('q'))]);
+        $query = new MatchAll();
+        if ($request->get('q')) {
+            $query = new Match('title', $request->get('q'));
+        }
+
+        return $this->render('default/list.html.twig', ['documents' => $index->search(new Search($query))]);
     }
 
     /**
