@@ -16,6 +16,7 @@
                 <th>ID</th>
                 <th>Scoring</th>
                 <th>Title</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                     <td>{{ document['_id'] }}</td>
                     <td>{{ document['_scoring'] }}</td>
                     <td>{{ document['_source']['title'] }}</td>
+                    <td>{{ document['_source']['description'] }}</td>
                 </tr>
             {% else %}
                 <tr>
