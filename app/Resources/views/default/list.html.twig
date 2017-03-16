@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for document in documents %}
+            {% for document in documents.hits %}
                 <tr>
                     <td>{{ document['_id'] }}</td>
                     <td>{{ document['_score'] }}</td>
