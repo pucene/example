@@ -14,7 +14,7 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Scoring</th>
+                <th>Score</th>
                 <th>Title</th>
                 <th>Description</th>
             </tr>
@@ -23,7 +23,7 @@
             {% for document in documents %}
                 <tr>
                     <td>{{ document['_id'] }}</td>
-                    <td>{{ document['_scoring'] }}</td>
+                    <td>{{ document['_score'] }}</td>
                     <td>{{ document['_source']['title'] }}</td>
                     <td>{{ document['_source']['description'] }}</td>
                 </tr>

@@ -30,7 +30,8 @@ class ImportCommand extends ContainerAwareCommand
         $factory = new JsonDumpFactory();
         $dumpReader = $factory->newBz2DumpReader($input->getArgument('file'));
 
-        $index = $this->getContainer()->get('pucene_doctrine.indices.test');
+        $puceneIndex = $this->getContainer()->get('pucene_doctrine.indices.test');
+        $elasticIndex = $this->getContainer()->get('pucene_elastic.indices.test');
 
         $count = $input->getOption('count');
         $progressBar = new ProgressBar($output, $count);
@@ -38,19 +39,19 @@ class ImportCommand extends ContainerAwareCommand
         for ($i = 0; $i < $count; ++$i) {
             $item = json_decode($dumpReader->nextJsonLine(), true);
 
-            if (!array_key_exists('en', $item['labels'])) {
+            if (!array_key_exists('en', $item['labels']) || !array_key_exists('en', $item['descriptions'])) {
                 $progressBar->advance();
 
                 continue;
             }
 
-            $index->index(
-                [
-                    'title' => $item['labels']['en']['value'],
-                    'description' => $item['descriptions']['en']['value'],
-                ],
-                $item['id']
-            );
+            $document = [
+                'title' => $item['labels']['en']['value'],
+                'description' => $item['descriptions']['en']['value'],
+            ];
+
+            $elasticIndex->index($document, $item['id']);
+            $puceneIndex->index($document, $item['id']);
 
             $progressBar->advance();
         }
