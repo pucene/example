@@ -1351,16 +1351,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b"
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/6968531206671f94377b01dc7888d5d1b858a01b",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d",
                 "shasum": ""
             },
             "require": {
@@ -1395,7 +1395,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-03-03T20:43:42+00:00"
+            "time": "2017-03-13T16:27:32+00:00"
         },
         {
             "name": "psr/cache",
@@ -1536,12 +1536,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/PuceneDoctrineBundle.git",
-                "reference": "fd45230411a18d5ea7f56006ba406e32b8faa0b5"
+                "reference": "265d6655db5f1167f352d8f8ee35efe6b7d5cc3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/PuceneDoctrineBundle/zipball/fd45230411a18d5ea7f56006ba406e32b8faa0b5",
-                "reference": "fd45230411a18d5ea7f56006ba406e32b8faa0b5",
+                "url": "https://api.github.com/repos/pucene/PuceneDoctrineBundle/zipball/265d6655db5f1167f352d8f8ee35efe6b7d5cc3c",
+                "reference": "265d6655db5f1167f352d8f8ee35efe6b7d5cc3c",
                 "shasum": ""
             },
             "require": {
@@ -1582,7 +1582,7 @@
                 "lucene",
                 "symfony"
             ],
-            "time": "2017-03-09 18:22:56"
+            "time": "2017-03-26 15:23:59"
         },
         {
             "name": "pucene/elastic-bundle",
@@ -1590,12 +1590,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/PuceneElasticBundle.git",
-                "reference": "ea436ccc37e8833af968f6c4936cda26b6b1f781"
+                "reference": "60e27c078e390749bb15abe975d733a03a0235b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/PuceneElasticBundle/zipball/ea436ccc37e8833af968f6c4936cda26b6b1f781",
-                "reference": "ea436ccc37e8833af968f6c4936cda26b6b1f781",
+                "url": "https://api.github.com/repos/pucene/PuceneElasticBundle/zipball/60e27c078e390749bb15abe975d733a03a0235b0",
+                "reference": "60e27c078e390749bb15abe975d733a03a0235b0",
                 "shasum": ""
             },
             "require": {
@@ -1633,7 +1633,7 @@
                 "lucene",
                 "symfony"
             ],
-            "time": "2017-03-15 20:45:47"
+            "time": "2017-03-26 15:24:50"
         },
         {
             "name": "pucene/pucene",
@@ -1641,12 +1641,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/pucene.git",
-                "reference": "51a90245f1e625babe8367b47a6911bf2b1f665b"
+                "reference": "b18834aa6ad814eb7eec3456c6b431cb17a47163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/pucene/zipball/51a90245f1e625babe8367b47a6911bf2b1f665b",
-                "reference": "51a90245f1e625babe8367b47a6911bf2b1f665b",
+                "url": "https://api.github.com/repos/pucene/pucene/zipball/b18834aa6ad814eb7eec3456c6b431cb17a47163",
+                "reference": "b18834aa6ad814eb7eec3456c6b431cb17a47163",
                 "shasum": ""
             },
             "require": {
@@ -1677,25 +1677,25 @@
                 "indexing",
                 "lucene"
             ],
-            "time": "2017-03-09 18:23:20"
+            "time": "2017-03-26 15:23:43"
         },
         {
             "name": "ramsey/uuid",
-            "version": "3.5.2",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "5677cfe02397dd6b58c861870dfaa5d9007d3954"
+                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/5677cfe02397dd6b58c861870dfaa5d9007d3954",
-                "reference": "5677cfe02397dd6b58c861870dfaa5d9007d3954",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0b7bdfb180e72c8d76e75a649ced67e392201458",
+                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458",
                 "shasum": ""
             },
             "require": {
                 "paragonie/random_compat": "^1.0|^2.0",
-                "php": ">=5.4"
+                "php": "^5.4 || ^7.0"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
@@ -1759,24 +1759,27 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2016-11-22T19:21:44+00:00"
+            "time": "2017-03-18T15:38:09+00:00"
         },
         {
             "name": "react/promise",
-            "version": "v2.5.0",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "2760f3898b7e931aa71153852dcd48a75c9b95db"
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/2760f3898b7e931aa71153852dcd48a75c9b95db",
-                "reference": "2760f3898b7e931aa71153852dcd48a75c9b95db",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/62785ae604c8d69725d693eb370e1d67e94c4053",
+                "reference": "62785ae604c8d69725d693eb370e1d67e94c4053",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "autoload": {
@@ -1802,7 +1805,7 @@
                 "promise",
                 "promises"
             ],
-            "time": "2016-12-22T14:09:01+00:00"
+            "time": "2017-03-25T12:08:31+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -1858,16 +1861,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.23",
+            "version": "v3.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7"
+                "reference": "472b339cf0c82f3a033b29f85d9d9cada3cd1a9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
-                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/472b339cf0c82f3a033b29f85d9d9cada3cd1a9c",
+                "reference": "472b339cf0c82f3a033b29f85d9d9cada3cd1a9c",
                 "shasum": ""
             },
             "require": {
@@ -1924,7 +1927,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-03-02T20:17:28+00:00"
+            "time": "2017-03-21T23:34:44+00:00"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2082,16 +2085,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v3.0.3",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "ebce76a39a65495a66c34eb1574cc4b9e35a4e64"
+                "reference": "6f96c7dbb6b2ef70b307a1a6f897153cbca3da47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/ebce76a39a65495a66c34eb1574cc4b9e35a4e64",
-                "reference": "ebce76a39a65495a66c34eb1574cc4b9e35a4e64",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/6f96c7dbb6b2ef70b307a1a6f897153cbca3da47",
+                "reference": "6f96c7dbb6b2ef70b307a1a6f897153cbca3da47",
                 "shasum": ""
             },
             "require": {
@@ -2138,7 +2141,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2017-01-10T20:01:51+00:00"
+            "time": "2017-03-26T11:55:59+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -2479,16 +2482,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.5.3",
+            "version": "v2.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec"
+                "reference": "8ab32ce31a7156621fb92e0466586186beb89759"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/b59a70d03b948e29d070b6c4416b4a03af4748ec",
-                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/8ab32ce31a7156621fb92e0466586186beb89759",
+                "reference": "8ab32ce31a7156621fb92e0466586186beb89759",
                 "shasum": ""
             },
             "require": {
@@ -2534,7 +2537,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2017-03-02T16:47:57+00:00"
+            "time": "2017-03-21T21:47:36+00:00"
         },
         {
             "name": "symfony/symfony",
@@ -2682,16 +2685,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "29bb02dde09ff56291d30f7687eb8696918023af"
+                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/29bb02dde09ff56291d30f7687eb8696918023af",
-                "reference": "29bb02dde09ff56291d30f7687eb8696918023af",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9718186a5df85a4f7917e78d3ffcabc204c75d25",
+                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25",
                 "shasum": ""
             },
             "require": {
@@ -2701,12 +2704,12 @@
             "require-dev": {
                 "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.3@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2741,20 +2744,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-27T00:16:20+00:00"
+            "time": "2017-03-22T15:41:51+00:00"
         },
         {
             "name": "wikibase/data-model",
-            "version": "6.3.1",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wmde/WikibaseDataModel.git",
-                "reference": "c16667e30b8c3e98573779b46f7099e55021d5e2"
+                "reference": "7fcddfc228b8f71663dede653c4e42b94ac7078e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wmde/WikibaseDataModel/zipball/c16667e30b8c3e98573779b46f7099e55021d5e2",
-                "reference": "c16667e30b8c3e98573779b46f7099e55021d5e2",
+                "url": "https://api.github.com/repos/wmde/WikibaseDataModel/zipball/7fcddfc228b8f71663dede653c4e42b94ac7078e",
+                "reference": "7fcddfc228b8f71663dede653c4e42b94ac7078e",
                 "shasum": ""
             },
             "require": {
@@ -2765,12 +2768,13 @@
             "require-dev": {
                 "ockcyp/covers-validator": "~0.4.0",
                 "phpmd/phpmd": "~2.3",
+                "phpunit/phpunit": "~4.8",
                 "squizlabs/php_codesniffer": "~2.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.3.x-dev"
+                    "dev-master": "7.0.x-dev"
                 }
             },
             "autoload": {
@@ -2802,27 +2806,27 @@
                 "wikibase",
                 "wikidata"
             ],
-            "time": "2016-11-30T16:04:13+00:00"
+            "time": "2017-03-15T11:31:52+00:00"
         },
         {
             "name": "wikibase/data-model-serialization",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wmde/WikibaseDataModelSerialization.git",
-                "reference": "b5c26661e5959aa3b71fec991c81a88f685657bc"
+                "reference": "e267bc28870044484361abec9de7b14757d84491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wmde/WikibaseDataModelSerialization/zipball/b5c26661e5959aa3b71fec991c81a88f685657bc",
-                "reference": "b5c26661e5959aa3b71fec991c81a88f685657bc",
+                "url": "https://api.github.com/repos/wmde/WikibaseDataModelSerialization/zipball/e267bc28870044484361abec9de7b14757d84491",
+                "reference": "e267bc28870044484361abec9de7b14757d84491",
                 "shasum": ""
             },
             "require": {
                 "data-values/serialization": "~1.0",
                 "php": ">=5.5.0",
                 "serialization/serialization": "~3.1",
-                "wikibase/data-model": "~6.0|~5.0|~4.2"
+                "wikibase/data-model": "~7.0|~6.0|~5.0|~4.2"
             },
             "require-dev": {
                 "data-values/geo": "~1.0|~0.1",
@@ -2830,10 +2834,15 @@
                 "data-values/time": "~0.2",
                 "phpunit/phpunit": "~4.8"
             },
+            "suggest": {
+                "data-values/geo": "Needed for deserialization of geographical values",
+                "data-values/number": "Needed for deserialization of numerical values",
+                "data-values/time": "Needed for deserialization of time values"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "2.4.x-dev"
                 }
             },
             "autoload": {
@@ -2869,7 +2878,7 @@
                 "wikibase",
                 "wikidata"
             ],
-            "time": "2017-02-15T10:34:31+00:00"
+            "time": "2017-03-16T12:13:27+00:00"
         },
         {
             "name": "wikimedia/assert",
@@ -2920,16 +2929,16 @@
     "packages-dev": [
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb"
+                "reference": "37f9f4e165b033fb76cc2320838321cc57140e65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
-                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/37f9f4e165b033fb76cc2320838321cc57140e65",
+                "reference": "37f9f4e165b033fb76cc2320838321cc57140e65",
                 "shasum": ""
             },
             "require": {
@@ -2941,7 +2950,9 @@
             },
             "require-dev": {
                 "doctrine/orm": "~2.4",
-                "symfony/doctrine-bridge": "~2.7|~3.0"
+                "symfony/doctrine-bridge": "~2.7|~3.0",
+                "symfony/filesystem": "~2.7|~3.0",
+                "symfony/phpunit-bridge": "^3.3"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -2968,7 +2979,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2017-03-03T15:22:50+00:00"
+            "time": "2017-03-15T01:02:10+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
