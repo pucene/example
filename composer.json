@@ -32,7 +32,10 @@
 
         "pucene/doctrine-bundle": "dev-master",
         "pucene/pucene": "@dev",
-        "pucene/core": "@dev"
+        "pucene/core": "@dev",
+        "elasticsearch/elasticsearch": "^2.0",
+        "jeroen/json-dump-reader": "^1.4",
+        "pucene/elastic-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

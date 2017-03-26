@@ -4,8 +4,124 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6b605024502a73c4b52e3235d4d9c83",
+    "content-hash": "d1b90232a7189ab0e36952152af4977d",
     "packages": [
+        {
+            "name": "data-values/data-values",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataValues/DataValues.git",
+                "reference": "de2b9abdbc26c4c393b25aa621619dfe3fc10fdc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataValues/DataValues/zipball/de2b9abdbc26c4c393b25aa621619dfe3fc10fdc",
+                "reference": "de2b9abdbc26c4c393b25aa621619dfe3fc10fdc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "replace": {
+                "mediawiki/data-values": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "DataValues.php"
+                ],
+                "classmap": [
+                    "src/interfaces",
+                    "tests/phpunit/DataValueTest.php"
+                ],
+                "psr-0": {
+                    "DataValues\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen De Dauw",
+                    "email": "jeroendedauw@gmail.com",
+                    "homepage": "http://jeroendedauw.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Defines the DataValue interface and some trivial implementations",
+            "homepage": "https://github.com/DataValues/DataValues",
+            "keywords": [
+                "datavalues",
+                "wikibase",
+                "wikidata"
+            ],
+            "time": "2014-09-26T07:02:27+00:00"
+        },
+        {
+            "name": "data-values/serialization",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataValues/Serialization.git",
+                "reference": "f872b09fa4215b21d463f317700fa9d671a779fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataValues/Serialization/zipball/f872b09fa4215b21d463f317700fa9d671a779fb",
+                "reference": "f872b09fa4215b21d463f317700fa9d671a779fb",
+                "shasum": ""
+            },
+            "require": {
+                "data-values/data-values": "~1.0|~0.1",
+                "php": ">=5.3.0",
+                "serialization/serialization": "~3.0"
+            },
+            "require-dev": {
+                "mediawiki/mediawiki-codesniffer": "~0.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DataValues\\Serializers\\": "src/Serializers",
+                    "DataValues\\Deserializers\\": "src/Deserializers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen De Dauw",
+                    "email": "jeroendedauw@gmail.com",
+                    "homepage": "http://jeroendedauw.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Serializers and deserializers for DataValue implementations",
+            "homepage": "https://github.com/DataValues/Serialization",
+            "keywords": [
+                "datavalues",
+                "deserializers",
+                "serialization",
+                "serializers",
+                "wikidata"
+            ],
+            "time": "2017-01-31T15:39:39+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.4.0",
@@ -776,6 +892,161 @@
             "time": "2016-12-18T15:42:34+00:00"
         },
         {
+            "name": "elasticsearch/elasticsearch",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elastic/elasticsearch-php.git",
+                "reference": "12a400656e4cf4c231d83cb56af3f50a27dcde93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/12a400656e4cf4c231d83cb56af3f50a27dcde93",
+                "reference": "12a400656e4cf4c231d83cb56af3f50a27dcde93",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/ringphp": "~1.0",
+                "php": ">=5.4",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "cpliakas/git-wrapper": "~1.0",
+                "mockery/mockery": "0.9.4",
+                "phpunit/phpunit": "~4.7",
+                "sami/sami": "~3.2",
+                "symfony/yaml": "2.4.3 as 2.4.2",
+                "twig/twig": "1.*"
+            },
+            "suggest": {
+                "ext-curl": "*",
+                "monolog/monolog": "Allows for client-level logging and tracing"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Elasticsearch\\": "src/Elasticsearch/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Zachary Tong"
+                }
+            ],
+            "description": "PHP Client for Elasticsearch",
+            "keywords": [
+                "client",
+                "elasticsearch",
+                "search"
+            ],
+            "time": "2016-11-30T17:15:05+00:00"
+        },
+        {
+            "name": "guzzlehttp/ringphp",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/RingPHP.git",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/streams": "~3.0",
+                "php": ">=5.4.0",
+                "react/promise": "~2.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Ring\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-05-20T03:37:09+00:00"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "reference": "47aaa48e27dae43d39fc1cea0ccf0d84ac1a2ba5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-10-12T19:18:40+00:00"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -877,17 +1148,141 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
-            "name": "monolog/monolog",
-            "version": "1.22.0",
+            "name": "jeroen/json-dump-reader",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
+                "url": "https://github.com/JeroenDeDauw/JsonDumpReader.git",
+                "reference": "ee5665047c84ccab7303e14aa39c3ff8589e1af2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
+                "url": "https://api.github.com/repos/JeroenDeDauw/JsonDumpReader/zipball/ee5665047c84ccab7303e14aa39c3ff8589e1af2",
+                "reference": "ee5665047c84ccab7303e14aa39c3ff8589e1af2",
+                "shasum": ""
+            },
+            "require": {
+                "jeroen/rewindable-generator": "~1.1",
+                "php": ">=5.6.0",
+                "wikibase/data-model-serialization": "~1.1|~2.0"
+            },
+            "require-dev": {
+                "data-values/geo": "^1.2.1",
+                "data-values/iri": "~0.1",
+                "data-values/number": "^0.8.2",
+                "data-values/time": "^0.8.4",
+                "jeroen/json-dump-data": "~1.0",
+                "ockcyp/covers-validator": "~0.4.0",
+                "phpmd/phpmd": "~2.3",
+                "phpunit/phpunit": "~5.7",
+                "squizlabs/php_codesniffer": "~2.3",
+                "whatthejeff/nyancat-phpunit-resultprinter": "~1.2"
+            },
+            "suggest": {
+                "data-values/geo": "Needed when using the EntityDocument iterator to read geographical values",
+                "data-values/iri": "Needed when using the EntityDocument iterator to read IRI values",
+                "data-values/number": "Needed when using the EntityDocument iterator to read numerical values",
+                "data-values/time": "Needed when using the EntityDocument iterator to read time values"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikibase\\JsonDumpReader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen De Dauw",
+                    "homepage": "http://jeroendedauw.com"
+                }
+            ],
+            "description": "Provides line-by-line readers and iterators for Wikibase/Wikidata JSON dumps",
+            "homepage": "https://github.com/JeroenDeDauw/JsonDumpReader",
+            "keywords": [
+                "bz2",
+                "dump",
+                "json",
+                "wikibase",
+                "wikidata"
+            ],
+            "time": "2017-03-03T21:37:13+00:00"
+        },
+        {
+            "name": "jeroen/rewindable-generator",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JeroenDeDauw/RewindableGenerator.git",
+                "reference": "80f5cfe9a509f0cf42d3556533f321bc9a1e0120"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JeroenDeDauw/RewindableGenerator/zipball/80f5cfe9a509f0cf42d3556533f321bc9a1e0120",
+                "reference": "80f5cfe9a509f0cf42d3556533f321bc9a1e0120",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "ockcyp/covers-validator": "~0.2.0",
+                "phpmd/phpmd": "~2.3",
+                "squizlabs/php_codesniffer": "~2.3",
+                "whatthejeff/nyancat-phpunit-resultprinter": "~1.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen De Dauw",
+                    "homepage": "http://jeroendedauw.com"
+                }
+            ],
+            "description": "Provides a simple adapter to make generators rewindable",
+            "homepage": "https://github.com/JeroenDeDauw/RewindableGenerator",
+            "keywords": [
+                "adapter",
+                "generator",
+                "iterator",
+                "rewind",
+                "rewindable"
+            ],
+            "time": "2015-11-08T10:31:38+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
                 "shasum": ""
             },
             "require": {
@@ -952,20 +1347,20 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-26T00:15:39+00:00"
+            "time": "2017-03-13T07:08:03+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.7",
+            "version": "v2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f"
+                "reference": "6968531206671f94377b01dc7888d5d1b858a01b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
-                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/6968531206671f94377b01dc7888d5d1b858a01b",
+                "reference": "6968531206671f94377b01dc7888d5d1b858a01b",
                 "shasum": ""
             },
             "require": {
@@ -1000,7 +1395,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-02-27T17:11:23+00:00"
+            "time": "2017-03-03T20:43:42+00:00"
         },
         {
             "name": "psr/cache",
@@ -1101,12 +1496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/core.git",
-                "reference": "8e00e8fa6741450924fe434892facb197a038bd1"
+                "reference": "83b947910646bbf0928ecb28dd45a51d1302256e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/core/zipball/8e00e8fa6741450924fe434892facb197a038bd1",
-                "reference": "8e00e8fa6741450924fe434892facb197a038bd1",
+                "url": "https://api.github.com/repos/pucene/core/zipball/83b947910646bbf0928ecb28dd45a51d1302256e",
+                "reference": "83b947910646bbf0928ecb28dd45a51d1302256e",
                 "shasum": ""
             },
             "require-dev": {
@@ -1133,7 +1528,7 @@
                 "indexing",
                 "lucene"
             ],
-            "time": "2017-02-28 17:22:41"
+            "time": "2017-03-04 10:42:18"
         },
         {
             "name": "pucene/doctrine-bundle",
@@ -1141,12 +1536,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/PuceneDoctrineBundle.git",
-                "reference": "89f34763dd88d84fc3fb5883a247836a25bb4c39"
+                "reference": "fd45230411a18d5ea7f56006ba406e32b8faa0b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/PuceneDoctrineBundle/zipball/89f34763dd88d84fc3fb5883a247836a25bb4c39",
-                "reference": "89f34763dd88d84fc3fb5883a247836a25bb4c39",
+                "url": "https://api.github.com/repos/pucene/PuceneDoctrineBundle/zipball/fd45230411a18d5ea7f56006ba406e32b8faa0b5",
+                "reference": "fd45230411a18d5ea7f56006ba406e32b8faa0b5",
                 "shasum": ""
             },
             "require": {
@@ -1187,7 +1582,58 @@
                 "lucene",
                 "symfony"
             ],
-            "time": "2017-02-28 06:33:16"
+            "time": "2017-03-09 18:22:56"
+        },
+        {
+            "name": "pucene/elastic-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pucene/PuceneElasticBundle.git",
+                "reference": "ea436ccc37e8833af968f6c4936cda26b6b1f781"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pucene/PuceneElasticBundle/zipball/ea436ccc37e8833af968f6c4936cda26b6b1f781",
+                "reference": "ea436ccc37e8833af968f6c4936cda26b6b1f781",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^2.5",
+                "pucene/core": "dev-master",
+                "symfony/config": "^2.8 || ^3.0",
+                "symfony/console": "^2.8 || ^3.0",
+                "symfony/dependency-injection": "^2.8 || ^3.0",
+                "symfony/http-kernel": "^2.8 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Pucene\\Bundle\\ElasticBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pucene Community",
+                    "homepage": "https://github.com/pucene/PuceneElasticBundle/contributors"
+                }
+            ],
+            "description": "Integrates elasticsearch in symfony with pucene interface.",
+            "keywords": [
+                "bundle",
+                "elasticsearch",
+                "indexing",
+                "lucene",
+                "symfony"
+            ],
+            "time": "2017-03-15 20:45:47"
         },
         {
             "name": "pucene/pucene",
@@ -1195,12 +1641,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/pucene.git",
-                "reference": "a175f1e8d26d9eba919136fd9b89f382791affff"
+                "reference": "51a90245f1e625babe8367b47a6911bf2b1f665b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/pucene/zipball/a175f1e8d26d9eba919136fd9b89f382791affff",
-                "reference": "a175f1e8d26d9eba919136fd9b89f382791affff",
+                "url": "https://api.github.com/repos/pucene/pucene/zipball/51a90245f1e625babe8367b47a6911bf2b1f665b",
+                "reference": "51a90245f1e625babe8367b47a6911bf2b1f665b",
                 "shasum": ""
             },
             "require": {
@@ -1231,7 +1677,7 @@
                 "indexing",
                 "lucene"
             ],
-            "time": "2017-02-27 15:16:26"
+            "time": "2017-03-09 18:23:20"
         },
         {
             "name": "ramsey/uuid",
@@ -1316,6 +1762,49 @@
             "time": "2016-11-22T19:21:44+00:00"
         },
         {
+            "name": "react/promise",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/promise.git",
+                "reference": "2760f3898b7e931aa71153852dcd48a75c9b95db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/2760f3898b7e931aa71153852dcd48a75c9b95db",
+                "reference": "2760f3898b7e931aa71153852dcd48a75c9b95db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Sorgalla",
+                    "email": "jsorgalla@gmail.com"
+                }
+            ],
+            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "keywords": [
+                "promise",
+                "promises"
+            ],
+            "time": "2016-12-22T14:09:01+00:00"
+        },
+        {
             "name": "sensio/distribution-bundle",
             "version": "v5.0.18",
             "source": {
@@ -1369,16 +1858,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.22",
+            "version": "v3.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "1c66c2e3b8f17f06178142386aff5a9f8057a104"
+                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/1c66c2e3b8f17f06178142386aff5a9f8057a104",
-                "reference": "1c66c2e3b8f17f06178142386aff5a9f8057a104",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
+                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
                 "shasum": ""
             },
             "require": {
@@ -1435,20 +1924,20 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-02-15T06:52:30+00:00"
+            "time": "2017-03-02T20:17:28+00:00"
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "f2ce0035fc512287978510ca1740cd111d60f89f"
+                "reference": "56bded66985e22f6eac2cf86735fd21c625bff2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/f2ce0035fc512287978510ca1740cd111d60f89f",
-                "reference": "f2ce0035fc512287978510ca1740cd111d60f89f",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/56bded66985e22f6eac2cf86735fd21c625bff2f",
+                "reference": "56bded66985e22f6eac2cf86735fd21c625bff2f",
                 "shasum": ""
             },
             "require": {
@@ -1479,7 +1968,63 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2017-02-18T17:53:25+00:00"
+            "time": "2017-03-09T17:33:20+00:00"
+        },
+        {
+            "name": "serialization/serialization",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wmde/Serialization.git",
+                "reference": "8e06ec58c8f52079942c9cb2f30b2260f62dc1f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wmde/Serialization/zipball/8e06ec58c8f52079942c9cb2f30b2260f62dc1f4",
+                "reference": "8e06ec58c8f52079942c9cb2f30b2260f62dc1f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Serialization.php"
+                ],
+                "psr-4": {
+                    "Deserializers\\": "src/Deserializers/",
+                    "Serializers\\": "src/Serializers/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen De Dauw",
+                    "email": "jeroendedauw@gmail.com",
+                    "homepage": "http://jeroendedauw.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library defining a Serializer and a Deserializer interface and basic utilities",
+            "homepage": "https://github.com/wmde/Serialization",
+            "keywords": [
+                "deserialization",
+                "deserializer",
+                "serialization",
+                "serializer",
+                "unserialization",
+                "wikidata"
+            ],
+            "time": "2014-08-19T01:53:31+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1934,16 +2479,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.4.2",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225"
+                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/ad751095576ce0c12a284e30e3fff80c91f27225",
-                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/b59a70d03b948e29d070b6c4416b4a03af4748ec",
+                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec",
                 "shasum": ""
             },
             "require": {
@@ -1965,7 +2510,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -1989,20 +2534,20 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2016-12-20T04:44:33+00:00"
+            "time": "2017-03-02T16:47:57+00:00"
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "141569be5b33a7cf0d141fb88422649fe11b0c47"
+                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/141569be5b33a7cf0d141fb88422649fe11b0c47",
-                "reference": "141569be5b33a7cf0d141fb88422649fe11b0c47",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
+                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
                 "shasum": ""
             },
             "require": {
@@ -2019,7 +2564,8 @@
             },
             "conflict": {
                 "phpdocumentor/reflection-docblock": "<3.0",
-                "phpdocumentor/type-resolver": "<0.2.0"
+                "phpdocumentor/type-resolver": "<0.2.0",
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
             },
             "provide": {
                 "psr/cache-implementation": "1.0"
@@ -2132,7 +2678,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-02-17T00:00:43+00:00"
+            "time": "2017-03-10T18:35:48+00:00"
         },
         {
             "name": "twig/twig",
@@ -2196,21 +2742,194 @@
                 "templating"
             ],
             "time": "2017-02-27T00:16:20+00:00"
+        },
+        {
+            "name": "wikibase/data-model",
+            "version": "6.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wmde/WikibaseDataModel.git",
+                "reference": "c16667e30b8c3e98573779b46f7099e55021d5e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wmde/WikibaseDataModel/zipball/c16667e30b8c3e98573779b46f7099e55021d5e2",
+                "reference": "c16667e30b8c3e98573779b46f7099e55021d5e2",
+                "shasum": ""
+            },
+            "require": {
+                "data-values/data-values": "~0.1|~1.0",
+                "php": ">=5.5.0",
+                "wikimedia/assert": "~0.2.2"
+            },
+            "require-dev": {
+                "ockcyp/covers-validator": "~0.4.0",
+                "phpmd/phpmd": "~2.3",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.3.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "WikibaseDataModel.php"
+                ],
+                "psr-4": {
+                    "Wikibase\\DataModel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Thiemo Mättig"
+                },
+                {
+                    "name": "Jeroen De Dauw",
+                    "email": "jeroendedauw@gmail.com",
+                    "homepage": "http://jeroendedauw.com"
+                }
+            ],
+            "description": "PHP implementation of the Wikibase DataModel",
+            "homepage": "https://github.com/wmde/WikibaseDataModel",
+            "keywords": [
+                "DataModel",
+                "wikibase",
+                "wikidata"
+            ],
+            "time": "2016-11-30T16:04:13+00:00"
+        },
+        {
+            "name": "wikibase/data-model-serialization",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wmde/WikibaseDataModelSerialization.git",
+                "reference": "b5c26661e5959aa3b71fec991c81a88f685657bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wmde/WikibaseDataModelSerialization/zipball/b5c26661e5959aa3b71fec991c81a88f685657bc",
+                "reference": "b5c26661e5959aa3b71fec991c81a88f685657bc",
+                "shasum": ""
+            },
+            "require": {
+                "data-values/serialization": "~1.0",
+                "php": ">=5.5.0",
+                "serialization/serialization": "~3.1",
+                "wikibase/data-model": "~6.0|~5.0|~4.2"
+            },
+            "require-dev": {
+                "data-values/geo": "~1.0|~0.1",
+                "data-values/number": ">=0.1 <0.9",
+                "data-values/time": "~0.2",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikibase\\DataModel\\": "src/"
+                },
+                "files": [
+                    "mediawiki.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas PT",
+                    "homepage": "https://github.com/Tpt"
+                },
+                {
+                    "name": "Jeroen De Dauw",
+                    "email": "jeroendedauw@gmail.com",
+                    "homepage": "http://jeroendedauw.com"
+                }
+            ],
+            "description": "Serializers and deserializers for the Wikibase DataModel",
+            "homepage": "https://github.com/wmde/WikibaseDataModelSerialization",
+            "keywords": [
+                "DataModel",
+                "deserializers",
+                "serialization",
+                "serializers",
+                "wikibase",
+                "wikidata"
+            ],
+            "time": "2017-02-15T10:34:31+00:00"
+        },
+        {
+            "name": "wikimedia/assert",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/Assert.git",
+                "reference": "2da55927525975f8d52825fc3ee02e5e36f5036c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/Assert/zipball/2da55927525975f8d52825fc3ee02e5e36f5036c",
+                "reference": "2da55927525975f8d52825fc3ee02e5e36f5036c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Assert\\": "src/",
+                    "Wikimedia\\Assert\\Test\\": "tests/phpunit/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Kinzler"
+                }
+            ],
+            "description": "Provides runtime assertions",
+            "homepage": "https://github.com/wmde/Assert",
+            "keywords": [
+                "assert",
+                "assertions",
+                "php",
+                "postcondition",
+                "precondition",
+                "qa"
+            ],
+            "time": "2015-04-29T17:23:50+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "ec278c0bd530edf155c4a00900577b5cb80f559e"
+                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/ec278c0bd530edf155c4a00900577b5cb80f559e",
-                "reference": "ec278c0bd530edf155c4a00900577b5cb80f559e",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
+                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
                 "shasum": ""
             },
             "require": {
@@ -2249,24 +2968,27 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-12-05T16:01:19+00:00"
+            "time": "2017-03-03T15:22:50+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "996374975357b569ea319ec1c98c5ca0f7dda610"
+                "reference": "9103d17dd57c512a3a027bb5628f6701464d6fef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/996374975357b569ea319ec1c98c5ca0f7dda610",
-                "reference": "996374975357b569ea319ec1c98c5ca0f7dda610",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/9103d17dd57c512a3a027bb5628f6701464d6fef",
+                "reference": "9103d17dd57c512a3a027bb5628f6701464d6fef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "conflict": {
+                "phpunit/phpunit": ">=6.0"
             },
             "suggest": {
                 "ext-zip": "Zip support is required when using bin/simple-phpunit",
@@ -2308,7 +3030,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-01-21T17:06:35+00:00"
+            "time": "2017-03-09T12:58:16+00:00"
         }
     ],
     "aliases": [],
@@ -2316,7 +3038,8 @@
     "stability-flags": {
         "pucene/doctrine-bundle": 20,
         "pucene/pucene": 20,
-        "pucene/core": 20
+        "pucene/core": 20,
+        "pucene/elastic-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

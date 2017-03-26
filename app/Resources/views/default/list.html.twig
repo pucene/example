@@ -14,14 +14,18 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Score</th>
                 <th>Title</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
-            {% for document in documents %}
+            {% for document in documents.hits %}
                 <tr>
                     <td>{{ document['_id'] }}</td>
+                    <td>{{ document['_score'] }}</td>
                     <td>{{ document['_source']['title'] }}</td>
+                    <td>{{ document['_source']['description'] }}</td>
                 </tr>
             {% else %}
                 <tr>
