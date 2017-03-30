@@ -68,3 +68,13 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+pucene:
+    adapter: elasticsearch
+    adapters: ~
+    indices:
+        my_index:
+            mappings:
+                my_type:
+                    properties:
+                        title: ~
