@@ -4,8 +4,67 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eeebe530f676f5f1512d188884abe5f",
+    "content-hash": "07a0c1e945655bb857512a4ac4e3e14a",
     "packages": [
+        {
+            "name": "composer/ca-bundle",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/ca-bundle.git",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "reference": "b17e6153cb7f33c7e44eb59578dc12eee5dc8e12",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-pcre": "*",
+                "php": "^5.3.2 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5",
+                "psr/log": "^1.0",
+                "symfony/process": "^2.5 || ^3.0"
+            },
+            "suggest": {
+                "symfony/process": "This is necessary to reliably check whether openssl_x509_parse is vulnerable on older php versions, but can be ignored on PHP 5.5.6+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\CaBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Lets you find a path to the system CA bundle, and includes a fallback to the Mozilla CA bundle.",
+            "keywords": [
+                "cabundle",
+                "cacert",
+                "certificate",
+                "ssl",
+                "tls"
+            ],
+            "time": "2017-03-06T11:59:08+00:00"
+        },
         {
             "name": "data-values/data-values",
             "version": "1.0.0",
@@ -1492,19 +1551,20 @@
         },
         {
             "name": "pucene/pucene",
-            "version": "dev-enhancement/refactoring",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wachterjohannes/pucene.git",
-                "reference": "80c9f6e99a66b2bb6bad051e7587c9a41215525e"
+                "url": "https://github.com/pucene/pucene.git",
+                "reference": "91586c003f2bc6b593605daa592b0f93e6fef8a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wachterjohannes/pucene/zipball/80c9f6e99a66b2bb6bad051e7587c9a41215525e",
-                "reference": "80c9f6e99a66b2bb6bad051e7587c9a41215525e",
+                "url": "https://api.github.com/repos/pucene/pucene/zipball/91586c003f2bc6b593605daa592b0f93e6fef8a4",
+                "reference": "91586c003f2bc6b593605daa592b0f93e6fef8a4",
                 "shasum": ""
             },
             "require": {
+                "elasticsearch/elasticsearch": "^2.0",
                 "ramsey/uuid": "^3.5",
                 "symfony/config": "^2.8 || ^3.0",
                 "symfony/console": "^2.8 || ^3.0",
@@ -1520,11 +1580,7 @@
                     "Pucene\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Pucene\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1539,10 +1595,7 @@
                 "indexing",
                 "lucene"
             ],
-            "support": {
-                "source": "https://github.com/wachterjohannes/pucene/tree/enhancement/refactoring"
-            },
-            "time": "2017-03-30 15:56:08"
+            "time": "2017-04-01 13:26:30"
         },
         {
             "name": "ramsey/uuid",
@@ -1796,19 +1849,20 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v4.0.3",
+            "version": "v4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "04bb87f5bd28a7d6ce7f4a4d1d6b94b3c1aa8dae"
+                "reference": "9e69eddf3bc49d1ee5c7908564da3141796d4bbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/04bb87f5bd28a7d6ce7f4a4d1d6b94b3c1aa8dae",
-                "reference": "04bb87f5bd28a7d6ce7f4a4d1d6b94b3c1aa8dae",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/9e69eddf3bc49d1ee5c7908564da3141796d4bbc",
+                "reference": "9e69eddf3bc49d1ee5c7908564da3141796d4bbc",
                 "shasum": ""
             },
             "require": {
+                "composer/ca-bundle": "^1.0",
                 "symfony/console": "~2.7|~3.0"
             },
             "bin": [
@@ -1836,7 +1890,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2017-03-29T08:08:00+00:00"
+            "time": "2017-03-31T14:50:32+00:00"
         },
         {
             "name": "serialization/serialization",
