@@ -25,7 +25,7 @@
                     <td>{{ document['_id'] }}</td>
                     <td>{{ document['_score'] }}</td>
                     <td>{{ document['_source']['title'] }}</td>
-                    <td>{{ document['_source']['description'] }}</td>
+                    <td>{{ document['_source']['description']|default() }}</td>
                 </tr>
             {% else %}
                 <tr>

@@ -8,7 +8,6 @@ use Pucene\Component\QueryBuilder\Search;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -17,14 +16,15 @@ class DefaultController extends Controller
      */
     public function listAction(Request $request)
     {
-        $index = $this->get('pucene_doctrine.indices.test');
+        $client = $this->get('pucene.client');
+        $index = $client->get('my_index');
 
         $query = new MatchAll();
         if ($request->get('q')) {
             $query = new Match('title', $request->get('q'));
         }
 
-        return $this->render('default/list.html.twig', ['documents' => $index->search(new Search($query))]);
+        return $this->render('default/list.html.twig', ['documents' => $index->search(new Search($query), 'my_type')]);
     }
 
     /**
@@ -32,9 +32,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $index = $this->get('pucene_doctrine.indices.test');
+        $client = $this->get('pucene.client');
+        $index = $client->get('my_index');
+
         $index->index(
-            ['title' => $request->get('title')]
+            ['title' => $request->get('title')],
+            'my_type'
         );
 
         return $this->redirectToRoute('list');

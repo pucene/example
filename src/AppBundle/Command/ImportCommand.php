@@ -18,6 +18,7 @@ class ImportCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this->setName('app:import')
+            ->addArgument('index', InputArgument::REQUIRED)
             ->addArgument('file', InputArgument::REQUIRED)
             ->addOption('count', null, InputOption::VALUE_REQUIRED, '', 1000);
     }
@@ -30,12 +31,13 @@ class ImportCommand extends ContainerAwareCommand
         $factory = new JsonDumpFactory();
         $dumpReader = $factory->newBz2DumpReader($input->getArgument('file'));
 
-        $puceneIndex = $this->getContainer()->get('pucene_doctrine.indices.test');
-        $elasticIndex = $this->getContainer()->get('pucene_elastic.indices.test');
+        $client = $this->getContainer()->get('pucene.client');
+        $index = $client->get($input->getArgument('index'));
 
         $count = $input->getOption('count');
         $progressBar = new ProgressBar($output, $count);
         $progressBar->setFormat('debug');
+
         for ($i = 0; $i < $count; ++$i) {
             $item = json_decode($dumpReader->nextJsonLine(), true);
 
@@ -50,8 +52,7 @@ class ImportCommand extends ContainerAwareCommand
                 'description' => $item['descriptions']['en']['value'],
             ];
 
-            $elasticIndex->index($document, $item['id']);
-            $puceneIndex->index($document, $item['id']);
+            $index->index($document, 'my_type', $item['id']);
 
             $progressBar->advance();
         }

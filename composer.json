@@ -30,17 +30,20 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "twig/twig": "^1.0||^2.0",
 
-        "pucene/doctrine-bundle": "dev-master",
-        "pucene/pucene": "@dev",
-        "pucene/core": "@dev",
+        "pucene/pucene": "dev-enhancement/refactoring",
         "elasticsearch/elasticsearch": "^2.0",
-        "jeroen/json-dump-reader": "^1.4",
-        "pucene/elastic-bundle": "dev-master"
+        "jeroen/json-dump-reader": "^1.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:wachterjohannes/pucene.git"
+        }
+    ],
     "scripts": {
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
