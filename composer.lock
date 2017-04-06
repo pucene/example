@@ -1555,15 +1555,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pucene/pucene.git",
-                "reference": "91586c003f2bc6b593605daa592b0f93e6fef8a4"
+                "reference": "74267295ec1609f58d746c7d9caac25acdf87c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pucene/pucene/zipball/91586c003f2bc6b593605daa592b0f93e6fef8a4",
-                "reference": "91586c003f2bc6b593605daa592b0f93e6fef8a4",
+                "url": "https://api.github.com/repos/pucene/pucene/zipball/74267295ec1609f58d746c7d9caac25acdf87c4f",
+                "reference": "74267295ec1609f58d746c7d9caac25acdf87c4f",
                 "shasum": ""
             },
             "require": {
+                "doctrine/dbal": "^2.5",
                 "elasticsearch/elasticsearch": "^2.0",
                 "ramsey/uuid": "^3.5",
                 "symfony/config": "^2.8 || ^3.0",
@@ -1595,7 +1596,7 @@
                 "indexing",
                 "lucene"
             ],
-            "time": "2017-04-01 13:26:30"
+            "time": "2017-04-05 17:30:15"
         },
         {
             "name": "ramsey/uuid",
@@ -2460,16 +2461,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.6",
+            "version": "v3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe"
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
                 "shasum": ""
             },
             "require": {
@@ -2600,7 +2601,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-03-10T18:35:48+00:00"
+            "time": "2017-04-05T12:52:29+00:00"
         },
         {
             "name": "twig/twig",
@@ -2902,7 +2903,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.2.6",
+            "version": "v3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
