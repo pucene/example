@@ -2,8 +2,8 @@
 
 namespace AppBundle\Controller;
 
-use Pucene\Component\QueryBuilder\Query\FullText\Match;
-use Pucene\Component\QueryBuilder\Query\MatchAll;
+use Pucene\Component\QueryBuilder\Query\FullText\MatchQuery;
+use Pucene\Component\QueryBuilder\Query\MatchAllQuery;
 use Pucene\Component\QueryBuilder\Search;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -19,9 +19,9 @@ class DefaultController extends Controller
         $client = $this->get('pucene.client');
         $index = $client->get('my_index');
 
-        $query = new MatchAll();
+        $query = new MatchAllQuery();
         if ($request->get('q')) {
-            $query = new Match('title', $request->get('q'));
+            $query = new MatchQuery('title', $request->get('q'));
         }
 
         return $this->render('default/list.html.twig', ['documents' => $index->search(new Search($query), 'my_type')]);
