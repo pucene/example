@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Score</th>
+            <th>Title</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for document in documents.hits %}
+            <tr>
+                <td>{{ document['_id'] }}</td>
+                <td>{{ document['_score'] }}</td>
+                <td><a href="{{ path('details', {id: document['_id']}) }}">{{ document['_source']['title'] }}</a></td>
+                <td>{{ document['_source']['description']|default() }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">No Result found</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
