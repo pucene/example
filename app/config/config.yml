@@ -70,7 +70,7 @@ swiftmailer:
     spool:     { type: memory }
 
 pucene:
-    adapter: elasticsearch
+    adapter: %pucene_adapter%
     adapters: ~
     indices:
         my_index:

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>
+        <a class="btn btn-default" href="{{ path('list') }}" role="button">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+        </a>
+
+        {{ document.title }}
+    </h1>
+
+    <p>{{ document.description }}</p>
+
+    <h3>Similar Documents</h3>
+
+    {% include 'includes/documents.html.twig' with {documents: documents} only %}
+{% endblock %}

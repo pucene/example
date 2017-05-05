@@ -1,44 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <form action="{{ path('index') }}" method="get">
-        <div class="form-group">
-            <label for="query-input">Query</label>
-            <input type="text" class="form-control" name="q" id="query-input" value="{{ app.request.get('q') }}"/>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-8">
+            <form action="{{ path('create') }}" method="get" class="form-inline pull-right">
+                <div class="form-group">
+                    <label for="query-input">Query</label>
+                    <input type="text" class="form-control" name="q" id="query-input"
+                           value="{{ app.request.get('q') }}"/>
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
+    </div>
+    {% include 'includes/documents.html.twig' with {documents: documents} only %}
 
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Score</th>
-                <th>Title</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for document in documents.hits %}
-                <tr>
-                    <td>{{ document['_id'] }}</td>
-                    <td>{{ document['_score'] }}</td>
-                    <td>{{ document['_source']['title'] }}</td>
-                    <td>{{ document['_source']['description']|default() }}</td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="2">No Result found</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <form action="{{ path('index') }}" method="post">
+    <form action="{{ path('create') }}" method="post">
         <div class="form-group">
             <label for="title-input">Title</label>
             <input type="text" class="form-control" name="title" id="title-input"/>
+        </div>
+
+        <div class="form-group">
+            <label for="description-input">Description</label>
+            <input type="text" class="form-control" name="description" id="description-input"/>
         </div>
 
         <button type="submit" class="btn btn-default">Submit</button>

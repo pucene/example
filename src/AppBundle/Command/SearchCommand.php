@@ -2,7 +2,7 @@
 
 namespace AppBundle\Command;
 
-use Pucene\Component\QueryBuilder\Query\FullText\Match;
+use Pucene\Component\QueryBuilder\Query\FullText\MatchQuery;
 use Pucene\Component\QueryBuilder\Search;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Helper\Table;
@@ -23,7 +23,7 @@ class SearchCommand extends ContainerAwareCommand
         $client = $this->getContainer()->get('pucene.client');
         $index = $client->get($input->getArgument('index'));
 
-        $search = new Search(new Match('title', $input->getArgument('query')));
+        $search = new Search(new MatchQuery('title', $input->getArgument('query')));
 
         $start = microtime(true);
         $result = $index->search($search, 'my_type');
