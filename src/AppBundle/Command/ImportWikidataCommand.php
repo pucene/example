@@ -10,14 +10,14 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Wikibase\JsonDumpReader\JsonDumpFactory;
 
-class ImportCommand extends ContainerAwareCommand
+class ImportWikidataCommand extends ContainerAwareCommand
 {
     /**
      * {@inheritdoc}
      */
     protected function configure()
     {
-        $this->setName('app:import')
+        $this->setName('app:import:wikidata')
             ->addArgument('index', InputArgument::REQUIRED)
             ->addArgument('file', InputArgument::REQUIRED)
             ->addOption('count', null, InputOption::VALUE_REQUIRED, '', 1000);
