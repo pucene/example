@@ -59,7 +59,7 @@ class DefaultController extends Controller
         $document = $index->get('my_type', $id);
         $query = new MoreLikeThisQuery([new DocumentLike('my_index', 'my_type', $id)], ['title', 'description']);
         $query->setMinTermFreq(1);
-        $query->getMinDocFreq(1);
+        $query->setMinDocFreq(1);
 
         return $this->render(
             'default/details.html.twig',
